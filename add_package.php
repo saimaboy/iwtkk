@@ -31,10 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    if (file_exists($targetFile)) {
-        echo 'File already exists.';
-        $uploadOk = 0;
-    }
+  
 
 
     if ($imageFileType !== 'jpg' && $imageFileType !== 'png' && $imageFileType !== 'jpeg' && $imageFileType !== 'gif') {

@@ -95,7 +95,7 @@
         </div>
     </div>
 
-    <!-- PHP code to retrieve and display packages -->
+    
     <?php
     $hostname = 'localhost';
     $username = 'root';
@@ -113,6 +113,7 @@
 
     while ($row = mysqli_fetch_assoc($result)) {
         echo '<div class="package-banner">';
+        echo '<p>ID -' . $row['pkg_id'] .'</p>';
         echo '<img src="' . $row['imageURL'] . '" alt="Tour Package Image class="img_pkg"">';
         echo '<h2>' . $row['pt'] . '</h2>';
         echo '<p>Rs.' . $row['price'] . '</p>';
@@ -123,7 +124,7 @@
 
     mysqli_close($conn);
     ?>
-    <!-- End of PHP code for displaying packages -->
+    
 
     <div class="footer">
         <img src="img/logo4.png" alt="Company Logo">

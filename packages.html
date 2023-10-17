@@ -82,7 +82,7 @@ button[type="submit"] {
     margin-right: auto;
 }
 
-button[type="button"] {
+.del-btn{
     background-color: red;
     color: #fff;
     padding: 10px 20px;
@@ -161,6 +161,7 @@ button[type="button"] {
     <div class="add-package">
         <h2>Add Package</h2>
         <form action="add_package.php" method="POST" enctype="multipart/form-data">
+           
             <div class="form-group">
                 <label for="package-title">Package Title:</label>
                 <input type="text" id="package-title" name="package-title" required>
@@ -187,7 +188,12 @@ button[type="button"] {
 
     <div class="update-package">
         <h2>Update Package</h2>
+
         <form action="update_packages.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="package_id">Package ID:</label>
+                <input type="text" id="package_id" name="package_id" required>
+            </div>
             <div class="form-group">
                 <label for="update-title">Package Title:</label>
                 <input type="text" id="update-title" name="update-title" required>
@@ -207,7 +213,21 @@ button[type="button"] {
 
 
             <button type="submit">Update Package</button>
-            <button type="button" onclick="deletePackage()">Delete</button>
+            
+        </form>
+    </div>
+    <div class="update-package">
+        <h2>Delete Package</h2>
+
+        <form action="delete_packages.php" method="post" enctype="multipart/form-data">
+            
+            <div class="form-group">
+                <label for="pkg_id">Package_ID</label>
+                <input type="text" id="pkg_id" name="pkg_id" required>
+            </div>        
+
+            <button type="submit" class="del-btn" style="background-color: red;">DELETE</button>
+            
         </form>
     </div>
 
