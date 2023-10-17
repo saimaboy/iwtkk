@@ -1,0 +1,79 @@
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-container {
+  width: 33%;
+}
+
+.login-form {
+  width: 67%;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  border: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 16px;
+  text-align: center;
+}

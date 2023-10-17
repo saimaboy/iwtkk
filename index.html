@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+		        .header h1 {
+            color: orange;
+            display: inline;
+        }
+        .header .name {
+            color: blue;
+            display: inline;
+        }
+
+        .header .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 1s ease;
+        }
+
+        .carousel img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .footer {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 20px;
+        }
+		.footer img {
+    width: 50px;
+    height: auto; 
+    margin-right: 10px; 
+}
+.boxcontainer {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .box {
+            width: 45%;
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card {
+            flex: 1;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .card:last-child {
+            border-right: none; /* Remove border from the last card */
+        }
+
+
+        .card img {
+            max-width: 200%;
+            max-height: 200px;
+        }
+		
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Tour de <span class="name">Taprobane</span></h1>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="./packages.html">Packages</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </div>
+    </div>
+
+    <div class="carousel">
+        <div class="carousel-container">
+            <img src="img/beach.jpg" alt="Image 1" />
+            <img src="img/ella.jpg" alt="Image 2" />
+            <img src="img/sigiriya (1).jpg" alt="Image 3" />
+        </div>
+    </div>
+
+	<div class="boxcontainer">
+        <div class="box">
+            <h2>Most Popular Attractions</h2>
+                <div class="card">
+                    <img src="img/16ec67991d1839bfaed0fa01accf9df2.jpg" alt="Attraction 1">
+                    <div class="card-text">Temple of Tooth Relic</div>
+                </div>
+                <div class="card">
+                    <img src="img/Ella-Rock.jpg" alt="Attraction 2">
+                    <div class="card-text">Ella</div>
+                </div>
+                <div class="card">
+                    <img src="img/galle-fort-main-1200x556 (1).jpg" alt="Attraction 3">
+                    <div class="card-text">Galle Fort</div>
+                </div>
+                <div class="card">
+                    <img src="img/yala-safari-day-tour-q6l72p0t08k.jpg" alt="Attraction 4">
+                    <div class="card-text">Yala</div>
+                </div>
+            
+        </div>
+
+        <div class="box">
+            <h2>Most Popular Tours</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/skyline-aerial-view-kandy-lake-t.jpg" alt="Tour 1">
+                    <div class="card-text">Kandy</div>
+                </div>
+                <div class="card">
+                    <img src="img/a-tourists-guide-to-jaffna-sri-l.jpg" alt="Tour 2">
+                    <div class="card-text">Jaffna</div>
+                </div>
+                <div class="card">
+                    <img src="img/Galle-Dutch-Fort-and-Mosque-2 (1).jpg" alt="Tour 3">
+                    <div class="card-text">Galle</div>
+                </div>
+                <div class="card">
+                    <img src="img/sigiriya (1).jpg" alt="Tour 4">
+                    <div class="card-text">Sigiriya</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="footer">
+		<img src="img/logo4.png" alt="Company Logo">
+        <p>Contact us: +123456789 | +987654321</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+    <script>
+        const carouselContainer = document.querySelector(".carousel-container");
+        const images = document.querySelectorAll(".carousel img");
+        let currentIndex = 0;
+
+        function showImage(index) {
+            carouselContainer.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 3000); // Change image every 3 seconds
+    </script>
+</body>
+</html>

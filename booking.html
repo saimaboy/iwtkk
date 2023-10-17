@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+<body>
+<style>
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.header h1 {
+    color: orange;
+    display: inline;
+}
+
+.header .name {
+    color: blue;
+    display: inline;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+
+.booking-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.booking-form h2 {
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+.form-group input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group input[type="tel"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button[type="submit"] {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+
+</style>
+
+    <div class="header">
+        <h1>Tour de <span class="name">Taprobane</span></h1>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Packages</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </div>
+    </div>
+
+    <div class="booking-form">
+        <h2>Booking</h2>
+        <form action="submit_booking.php" method="post">
+            <div class="form-group">
+                <label for="tour">Select your tour:</label>
+                <input type="text" id="tour" name="tour" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Telephone No:</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="pickup-location">Pickup Location:</label>
+                <input type="text" id="pickup-location" name="pickup-location" required>
+            </div>
+            <div class="form-group">
+                <label for="arrival-date">Arrival Date:</label>
+                <input type="date" id="arrival-date" name="arrival-date" required>
+            </div>
+            <div class="form-group">
+                <label for="departure-date">Departure Date:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
+            </div>
+            <div class="form-group">
+                <label for="adults">Number of Adults:</label>
+                <input type="number" id="adults" name="adults" required>
+            </div>
+            <div class="form-group">
+                <label for="children">Number of Children:</label>
+                <input type="number" id="children" name="children" required>
+            </div>
+			<div class="form-group">
+				<label for="transport-method">Method of Transport:</label>
+				<select id="transport-method" name="transport-method">
+					<option value="Car">Car</option>
+					<option value="Van">Van</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="tour-guide">Would you like to assign a tour guide:</label>
+					<select id="tour-guide" name="tour-guide">
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+			</div>
+
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <img src="img/logo4.png" alt="Company Logo">
+        <p>Contact us: +123456789 | +987654321</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+</body>
+</html>

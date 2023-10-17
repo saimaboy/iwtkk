@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations</title>
+</head>
+<body>
+	<style>
+		body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.header h1 {
+    color: orange;
+    display: inline;
+}
+
+.header .name {
+    color: blue;
+    display: inline;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.destination-banners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.destination-banner {
+    width: 30%;
+    margin: 10px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.destination-banner img {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+	</style>
+
+    <div class="header">
+        <h1>Tour de <span class="name">Taprobane</span></h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Packages</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="img/So-Sri-Lanka-1349X446.jpg" alt="Banner Image">
+    </div>
+
+    <div class="destination-banners">
+        <div class="destination-banner">
+            <img src="img/yala-safari-day-tour-q6l72p0t08k.jpg" alt="Destination 1">
+            <h2>Yala National Park</h2>
+        </div>
+        <div class="destination-banner">
+            <img src="img/16ec67991d1839bfaed0fa01accf9df2.jpg" alt="Destination 2">
+            <h2>Kandy</h2>
+        </div>
+        <div class="destination-banner">
+            <img src="img/sigiriya (1).jpg" alt="Destination 3">
+            <h2>Sigiriya</h2>
+        </div>
+        <!-- Add more destination banners as needed -->
+    </div>
+
+    <div class="footer">
+        <img src="img/logo4.png" alt="Company Logo">
+        <p>Contact us: +123456789 | +987654321</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+</body>
+</html>

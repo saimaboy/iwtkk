@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<style>
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.header h1 {
+    color: orange;
+    display: inline;
+}
+
+.header .name {
+    color: blue;
+    display: inline;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+	.tour-feedback-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.tour-feedback-form h2 {
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tour-feedback-form p {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+button[type="submit"] {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+</style>
+
+    <div class="header">
+        <h1>Tour de <span class="name">Taprobane</span></h1>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Packages</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </div>
+    </div>
+
+    <div class="tour-feedback-form">
+        <h2>Tour Feedback</h2>
+        <form action="submit_feedback.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="package">Package:</label>
+                <input type="text" id="package" name="package" required>
+            </div>
+            <div class="form-group">
+                <label for="guide-name">Tour Guide Name:</label>
+                <input type="text" id="guide-name" name="guide-name" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Tour Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+            </div>
+
+            <p>Please rate us using the following criteria:</p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Very Satisfied</th>
+                    <th>Satisfied</th>
+                    <th>Not Satisfied</th>
+                </tr>
+                <tr>
+                    <td>Transport</td>
+                    <td><input type="radio" name="transport" value="Very Satisfied"></td>
+                    <td><input type="radio" name="transport" value="Satisfied"></td>
+                    <td><input type="radio" name="transport" value="Not Satisfied"></td>
+                </tr>
+                <tr>
+                    <td>Places</td>
+                    <td><input type="radio" name="places" value="Very Satisfied"></td>
+                    <td><input type="radio" name="places" value="Satisfied"></td>
+                    <td><input type="radio" name="places" value="Not Satisfied"></td>
+                </tr>
+            </table>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <img src="img/logo4.png" alt="Company Logo">
+        <p>Contact us: +123456789 | +987654321</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+</body>
+</html>

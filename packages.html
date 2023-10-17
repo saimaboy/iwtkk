@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+</head>
+<body>
+
+<style>
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.header h1 {
+    color: orange;
+    display: inline;
+}
+
+.header .name {
+    color: blue;
+    display: inline;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}	
+	.add-package, .update-package {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.add-package h2, .update-package h2 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"], .form-group input[type="file"], .form-group textarea , .form-group input[type="date"], .form-group select{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[type="button"] {
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+	.tour-guide-container {
+    display: flex;
+	padding: 20px;
+}
+.assign-guide, .available-guides {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.assign-guide {
+    background-color: #f2f2f2;
+}
+
+.assign-guide h2 {
+    color: #333;
+}
+
+.available-guides {
+    background-color: #f2f2f2;
+}
+
+.available-guides h2 {
+    color: #333;
+}
+.guide {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.guide img {
+    max-width: 100%;
+    max-height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+</style>
+
+    <div class="header">
+        <h1>Tour de <span class="name">Taprobane</span></h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="destination.html">Destinations</a>
+            <a href="ourPackages.php">Packages</a>
+            <a href="contactUs.html">Contact Us</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </div>
+    </div>
+
+    <div class="add-package">
+        <h2>Add Package</h2>
+        <form action="add_package.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="package-title">Package Title:</label>
+                <input type="text" id="package-title" name="package-title" required>
+            </div>
+            <div class="form-group">
+                <label for="package-description">Package Description:</label>
+                <textarea id="package-description" name="package-description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="package-price">Price:</label>
+                <input type="text" id="package-price" name="package-price" required>
+            </div>
+            <div class="form-group">
+                <label for="package-image">Package Image:</label>
+                <input type="file" id="package-image" name="package-image" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="add-to-homepage">Add to Homepage:</label>
+                <input type="checkbox" id="add-to-homepage" name="add-to-homepage">
+            </div>
+            <button type="submit">Add Package</button>
+        </form>
+    </div>
+
+    <div class="update-package">
+        <h2>Update Package</h2>
+        <form action="update_packages.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="update-title">Package Title:</label>
+                <input type="text" id="update-title" name="update-title" required>
+            </div>
+            <div class="form-group">
+                <label for="update-description">Package Description:</label>
+                <textarea id="update-description" name="update-description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="update-price">Price:</label>
+                <input type="text" id="update-price" name="update-price" required>
+            </div>
+            <div class="form-group">
+                <label for="update-image">Package Image:</label>
+                <input type="file" id="update-image" name="update-image" accept="image/*" required>
+            </div>
+
+
+            <button type="submit">Update Package</button>
+            <button type="button" onclick="deletePackage()">Delete</button>
+        </form>
+    </div>
+
+	    <div class="tour-guide-container">
+        <div class="assign-guide">
+            <h2>Assign Tour Guide</h2>
+            <form action="assign_guide.php" method="post">
+                <div class="form-group">
+                    <label for="booking-id">Booking ID:</label>
+                    <input type="text" id="booking-id" name="booking-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="tour-guide">Tour Guide:</label>
+                    <select id="tour-guide" name="tour-guide" required>
+                        <option value="guide1">John Wayne</option>
+                        <option value="guide2">Mike Oswald</option>
+                        <option value="guide3">Peter Dahl</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="additional-info">Additional Information:</label>
+                    <textarea id="additional-info" name="additional-info"></textarea>
+                </div>
+                <button type="submit">Assign</button>
+            </form>
+        </div>
+
+        <div class="available-guides">
+            <h2>Available Guides</h2>
+            <div class="guide">
+                <img src="img/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="Tour Guide 1">
+                <p>Name: John Wayne</p>
+                <p>Experience: 5 years</p>
+            </div>
+            <div class="guide">
+                <img src="img/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg" alt="Tour Guide 2">
+                <p>Name: Mike Oswald</p>
+                <p>Experience: 3 years</p>
+            </div>
+            <div class="guide">
+                <img src="img/depositphotos_12196477-stock-photo-smiling-men-isolated-on-the.jpg" alt="Tour Guide 3">
+                <p>Name: Peter Dahl</p>
+                <p>Experience: 7 years</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="img/logo4.png" alt="Company Logo">
+        <p>Contact us: +123456789 | +987654321</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+</body>
+</html>

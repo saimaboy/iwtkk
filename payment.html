@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<style>
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.header h1 {
+    color: orange;
+    display: inline;
+}
+
+.header .name {
+    color: blue;
+    display: inline;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+
+.payment-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.payment-form h2 {
+    color: #333;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+	padding: 20px; 
+}
+
+.payment-option label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.payment-option img {
+    width: 80px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+</style>
+
+    <div class="header">
+        <h1>Tour de <span class="name">Taprobane</span></h1>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Packages</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </div>
+    </div>
+
+    <div class="payment-form">
+        <h2>Select Payment Method</h2>
+        <form action="#" method="post">
+            <div class="payment-option">
+                <label for="card-payment">
+                    <img src="img/png-clipart-visa-and-mastercard-ads-mastercard-credit-card-american-express-visa-debit-card-mastercard-text-payment.png" alt="Card Payment">
+                    Card Payment
+                </label>
+                <input type="radio" id="card-payment" name="payment-method" value="card">
+            </div>
+            <div class="payment-option">
+                <label for="paypal-payment">
+                    <img src="img/png-transparent-paypal-business-logo-computer-icons-paypal-blue-text-trademark.png" alt="PayPal">
+                    PayPal
+                </label>
+                <input type="radio" id="paypal-payment" name="payment-method" value="paypal">
+            </div>
+            <div class="payment-option">
+                <label for="cash-payment">
+                    <img src="img/png-transparent-money-cash-cash-coupon-material-miscellaneous-rectangle-credit-card.png" alt="Cash">
+                    Cash
+                </label>
+                <input type="radio" id="cash-payment" name="payment-method" value="cash">
+            </div>
+            
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <img src="img/logo4.png" alt="Company Logo">
+        <p>Contact us: +123456789 | +987654321</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+</body>
+</html>
+
